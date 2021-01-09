@@ -15,3 +15,14 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+/*.log
+/.idea
+/qr_code.png
+/cookie.txt
+*.bak
+go.sum
+/同步代码.sh
+conf.my.ini
+logs
+*.log
+cookie.txt

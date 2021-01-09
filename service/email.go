@@ -2,8 +2,8 @@ package service
 
 import (
 	"github.com/unknwon/goconfig"
+	"github.com/ztino/jd_seckill/log"
 	"gopkg.in/gomail.v2"
-	"log"
 	"strconv"
 )
 
@@ -30,6 +30,7 @@ func (this *Email) Send(mailTo []string,subject,body string) error {
 	m.SetHeader("Subject",subject)
 	m.SetBody("text/html",body)
 	d := gomail.NewDialer(this.host,port,this.user,this.pass)
+	log.Println("正在发送通知...")
 	err:=d.DialAndSend(m)
 	if err!=nil {
 		log.Println("邮件发送失败，返回错误:"+err.Error())
